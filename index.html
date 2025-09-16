@@ -329,7 +329,6 @@
     <h1>AliShop</h1>
     <h2>🔥Кращі товари для вас🔥</h2>
 
-    <!-- 🔥 Банер з таймером -->
     <div class="sale-banner">
       ⏳ Знижка скоро закінчиться!
       <span class="timer" id="timer">05:00</span>
@@ -337,7 +336,6 @@
   </header>
 
   <main class="container">
-    <!-- карточки як у тебе -->
     <div class="card">
       <img src="./staticfiles/6158909760_6158909760.webp" alt="Товар 1">
       <div class="card-content">
@@ -463,10 +461,21 @@
     </div>
   </main>
 
-  <footer>
-    <p>© 2025 AliShop. Всі права захищені.</p>
-    <a href='./privacy-police.html'>Політика конфіденційності</a>
-  </footer>
+<footer>
+    <div style="margin-top:10px;">
+      <a href="https://www.visa.com" target="_blank" style='text-decoration: none;'>
+        <img src="./staticfiles/visacard.png" alt="Visa" style="height:30px; margin-right:10px;">
+      </a>
+      <a href="https://www.mastercard.com" target="_blank">
+        <img src="./staticfiles/mastercard.png" alt="Mastercard" style="height:40px;">
+      </a>
+    </div>
+  <p>© 2025 AliShop. Всі права захищені.</p>
+  <!-- Політика конфіденційності -->
+  <p><a href="./privacy-police.html">Політика конфіденційності</a></p>
+
+  <!-- Логотипи платіжних систем -->
+</footer>
 
   <script>
     function startTimer(duration, display) {
@@ -481,14 +490,13 @@
         display.textContent = minutes + ":" + seconds
 
         if (--timer < 0) {
-          // перезапускаємо, щоб створювався "нескінченний цикл"
           timer = duration
         }
       }, 1000)
     }
 
     window.onload = function () {
-      let fiveMinutes = 60 * 5, // 5 хвилин
+      let fiveMinutes = 60 * 5,
         display = document.getElementById('timer')
       startTimer(fiveMinutes, display)
     };
